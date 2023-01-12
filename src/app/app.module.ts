@@ -15,6 +15,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { LogoutComponent } from './logout/logout.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const approutes: Routes = [
@@ -39,7 +40,8 @@ const approutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    BrowserAnimationsModule
 
   ],
   providers: [AuthService],
