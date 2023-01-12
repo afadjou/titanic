@@ -10,6 +10,7 @@ export class DashboardComponent {
   isConnected: boolean = false;
   constructor(private authService: AuthService){}
   ngOnInit(){
+
     this.isConnected = this.authService.isLoggedIn;
   }
 }
