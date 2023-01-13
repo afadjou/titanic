@@ -16,6 +16,8 @@ import { AuthGuard } from './shared/guard/auth.guard';
 import { LogoutComponent } from './logout/logout.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchFormComponent } from './components/search-form/search-form.component';
+import { DxDataGridModule } from 'devextreme-angular';
 
 
 const approutes: Routes = [
@@ -23,6 +25,7 @@ const approutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'logout', component: LogoutComponent },
+  { path: 'statistics', component: StatisticsComponent }
 ];
 @NgModule({
   declarations: [
@@ -30,7 +33,7 @@ const approutes: Routes = [
     LoginComponent,
     DashboardComponent,
     LogoutComponent,
-    StatisticsComponent
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,10 @@ const approutes: Routes = [
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DxDataGridModule,
+
+
 
   ],
   providers: [AuthService],

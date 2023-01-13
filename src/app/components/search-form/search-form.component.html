@@ -1,0 +1,86 @@
+<dx-data-grid
+  id="gridContainer"
+  [dataSource]="passengers"
+  keyExpr="passengerId"
+  [showBorders]="true"
+  (onToolbarPreparing)="alterDataGriOperation($event)"
+>
+ <dxo-filter-row
+    [visible]="true"
+    [applyFilter]="true"
+  ></dxo-filter-row>
+  <dxo-header-filter [visible]="true"></dxo-header-filter>
+  <dxo-search-panel
+    [visible]="true"
+    [width]="240"
+    placeholder="Search..."
+  ></dxo-search-panel>
+  <dxi-column dataField="name" caption="Name">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="age" [width]="80" caption="Age">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="cabin" [width]="80" caption="Cabin">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="embarked" [width]="80" caption="Embarked">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="fare" [width]="80" caption="Fare">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="parch" [width]="80" caption="Parch">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="passengerId" [width]="80" caption="PassengerId">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="pclass" [width]="80" caption="Pclass">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="sex" [width]="80" caption="Sex">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="sibSp" [width]="80" caption="SibSp">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="survived" [width]="80" caption="Survived">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="ticket" caption="Ticket">
+    <dxo-header-filter></dxo-header-filter>
+  </dxi-column>
+  <!-- <dxi-column
+    dataField="OrderDate"
+    alignment="right"
+    dataType="date"
+    [width]="120"
+    [calculateFilterExpression]="calculateFilterExpression"
+  >
+    <dxo-header-filter [dataSource]="orderHeaderFilter"></dxo-header-filter>
+  </dxi-column>
+  <dxi-column
+    dataField="DeliveryDate"
+    alignment="right"
+    dataType="datetime"
+    format="M/d/yyyy, HH:mm"
+    [width]="180"
+  ></dxi-column>
+  <dxi-column
+    dataField="SaleAmount"
+    alignment="right"
+    format="currency"
+    [editorOptions]="{ format: 'currency', showClearButton: true }"
+  >
+    <dxo-header-filter
+      [dataSource]="saleAmountHeaderFilter"
+    ></dxo-header-filter>
+  </dxi-column>
+  <dxi-column dataField="Employee"></dxi-column>
+  <dxi-column dataField="CustomerStoreCity" caption="City">
+    <dxo-header-filter [allowSearch]="true"></dxo-header-filter>
+  </dxi-column> -->
+</dx-data-grid>
+
+
