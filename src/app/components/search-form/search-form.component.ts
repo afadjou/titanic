@@ -29,12 +29,16 @@ export class SearchFormComponent {
         collection.forEach((item: any) => {
           if (Array.isArray(item) && item.length > 0) {
             this.passengers = item;
+
             }
          });
 
+
       },
-      (error: any) => {}
-    );
+
+    )
+    .catch((error) => {});
+
   }
 
 
