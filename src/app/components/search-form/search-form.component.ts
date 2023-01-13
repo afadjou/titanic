@@ -21,7 +21,10 @@ import {
 })
 export class SearchFormComponent {
   passengers: any = [];
+
+
   constructor(private apiService: ApiService, private router: Router) {}
+
 
   ngOnInit() {
     this.apiService.loard().then(
