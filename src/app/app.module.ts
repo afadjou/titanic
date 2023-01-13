@@ -17,7 +17,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchFormComponent } from './components/search-form/search-form.component';
-import { DxDataGridModule } from 'devextreme-angular';
+import { DxDataGridModule, DxPieChartModule } from 'devextreme-angular';
 
 
 const approutes: Routes = [
@@ -33,7 +33,8 @@ const approutes: Routes = [
     LoginComponent,
     DashboardComponent,
     LogoutComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,10 +47,9 @@ const approutes: Routes = [
     AngularFireStorageModule,
     BrowserAnimationsModule,
     DxDataGridModule,
-
-
-
-  ],
+    BrowserModule,
+    DxPieChartModule
+],
   providers: [AuthService],
   bootstrap: [AppComponent]
 })
